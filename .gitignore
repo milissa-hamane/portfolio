@@ -1,0 +1,4 @@
+config.ini
+includes/config.php
+data/*
+!data/.htaccess

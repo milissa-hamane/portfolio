@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Référencement naturel (SEO) -->
+  <title>Milissa Hamane – Portfolio BTS SIO SISR | Systèmes, réseaux & cybersécurité</title>
+  <meta name="description" content="Portfolio de Milissa Hamane, étudiante en BTS SIO option SISR à Nantes : projets systèmes et réseaux, GLPI, épreuves E5 et E6, compétences et CV.">
+  <meta name="keywords" content="BTS SIO, SISR, portfolio, systèmes et réseaux, cybersécurité, GLPI, Nantes, stage, E5, E6">
+  <meta name="author" content="Milissa Hamane">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.votre-domaine.fr/">
+  <meta name="theme-color" content="#07090f">
+
+  <!-- Partage sur les réseaux sociaux (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Milissa Hamane – Portfolio BTS SIO SISR">
+  <meta property="og:description" content="Projets systèmes, réseaux et cybersécurité. Épreuves E5 et E6 du BTS SIO.">
+  <meta property="og:url" content="https://www.votre-domaine.fr/">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js" defer></script>
+
+  <!-- Données structurées pour Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Milissa Hamane",
+    "jobTitle": "Étudiante BTS SIO option SISR",
+    "url": "https://www.votre-domaine.fr/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Malville", "postalCode": "44260", "addressCountry": "FR" },
+    "alumniOf": "MyDigitalSchool Nantes",
+    "knowsAbout": ["Administration systèmes", "Réseaux", "Cybersécurité", "GLPI", "Linux", "Windows"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- Écran de démarrage façon terminal -->
+  <div class="boot" id="boot" aria-hidden="true"><pre id="boot-log"></pre></div>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="logo" href="#accueil" aria-label="Accueil"><span class="logo-bracket">&gt;_</span>MH<span class="cursor-blink">_</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <ul class="menu" id="menu">
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#epreuves">E5 / E6</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="menu-cv" href="cv.html">CV</a></li>
+      </ul>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Changer de thème (sombre / clair)">
+        <span class="icon-moon" aria-hidden="true">☾</span><span class="icon-sun" aria-hidden="true">☀</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== ACCUEIL / PRÉSENTATION ===== -->
+    <section class="hero container" id="accueil">
+      <div class="hero-text">
+        <p class="hero-prompt mono"><span class="accent">root@milissa</span>:<span class="accent2">~</span>$ whoami</p>
+        <h1 class="glitch" data-text="Milissa Hamane" data-bind="profil.nom">Milissa Hamane</h1>
+        <p class="hero-role mono"><span class="accent">&gt;</span> <span id="typed">Étudiante BTS SIO option SISR</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero-pitch" data-bind="profil.accroche">Je construis, sécurise et documente des infrastructures systèmes et réseaux.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+          <a class="btn btn-ghost" href="cv.html">Mon CV</a>
+          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+        </div>
+        <ul class="stats" aria-label="Chiffres clés">
+          <li><strong class="counter" data-count="projets">0</strong><span>projets</span></li>
+          <li><strong class="counter" data-count="competences">0</strong><span>compétences</span></li>
+          <li><strong class="counter" data-count="vm" data-value="6">0</strong><span>VM déployées</span></li>
+        </ul>
+      </div>
+
+      <div class="terminal reveal" aria-label="Terminal de présentation">
+        <div class="terminal-bar"><span></span><span></span><span></span><p class="mono">milissa@sisr: ~/portfolio</p></div>
+        <pre class="terminal-body mono" id="terminal"></pre>
+      </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section class="section container" id="apropos">
+      <h2 class="section-title reveal"><span class="mono accent">01.</span> À propos</h2>
+      <div class="about">
+        <p class="about-text reveal" data-bind="profil.presentation">Étudiante en BTS SIO option SISR à MyDigitalSchool Nantes.</p>
+        <ul class="about-cards" id="about-cards"></ul>
+      </div>
+    </section>
+
+    <!-- ===== COMPÉTENCES ===== -->
+    <section class="section container" id="competences">
+      <h2 class="section-title reveal"><span class="mono accent">02.</span> Compétences</h2>
+      <div class="skills-grid" id="skills"></div>
+      <div class="lang-interests">
+        <div class="panel reveal"><h3>Langues</h3><ul class="chips" id="langues"></ul></div>
+        <div class="panel reveal"><h3>Centres d'intérêt</h3><ul class="interests" id="interets"></ul></div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETS ===== -->
+    <section class="section container" id="projets">
+      <h2 class="section-title reveal"><span class="mono accent">03.</span> Projets</h2>
+      <div class="filters reveal" id="filters" role="group" aria-label="Filtrer les projets"></div>
+      <div class="projects-grid" id="projects"></div>
+    </section>
+
+    <!-- ===== ÉPREUVES E5 / E6 ===== -->
+    <section class="section container" id="epreuves">
+      <h2 class="section-title reveal"><span class="mono accent">04.</span> Épreuves E5 &amp; E6</h2>
+      <div class="exams" id="exams"></div>
+    </section>
+
+    <!-- ===== PARCOURS : FORMATIONS & EXPÉRIENCES ===== -->
+    <section class="section container" id="parcours">
+      <h2 class="section-title reveal"><span class="mono accent">05.</span> Parcours</h2>
+      <div class="timeline-cols">
+        <div><h3 class="col-title reveal">Expériences</h3><ol class="timeline" id="experiences"></ol></div>
+        <div><h3 class="col-title reveal">Formations</h3><ol class="timeline" id="formations"></ol></div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section class="section container" id="certifications">
+      <h2 class="section-title reveal"><span class="mono accent">06.</span> Certifications</h2>
+      <div class="certs" id="certs"></div>
+    </section>
+
+    <!-- ===== CONTACT / COORDONNÉES ===== -->
+    <section class="section container" id="contact">
+      <h2 class="section-title reveal"><span class="mono accent">07.</span> Contact</h2>
+      <div class="contact">
+        <div class="panel reveal">
+          <h3>Mes coordonnées</h3>
+          <ul class="coords" id="coords"></ul>
+          <a class="btn btn-primary" href="cv.html">Voir / imprimer mon CV</a>
+        </div>
+        <form class="panel contact-form reveal" id="contact-form" novalidate>
+          <h3>Envoyer un message</h3>
+          <label>Nom<input type="text" name="nom" required minlength="2" maxlength="80" autocomplete="name"></label>
+          <label>E-mail<input type="email" name="email" required maxlength="120" autocomplete="email"></label>
+          <label>Message<textarea name="message" rows="5" required minlength="10" maxlength="3000"></textarea></label>
+          <champ piège anti-robots, invisible pour les humains>
+          <label class="hp" aria-hidden="true">Site web<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="btn btn-primary" type="submit">Envoyer <span class="mono">&gt;&gt;</span></button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="mono">© <span id="year">2026</span> <span data-bind="profil.nom">Milissa Hamane</span> · BTS SIO SISR</p>
+      <p class="mono muted">Fait main : HTML · CSS · JavaScript · PHP · JSON</p>
+      <a class="to-top" href="#accueil" aria-label="Revenir en haut">↑</a>
+    </div>
+  </footer>
+
+  <!-- Fenêtre de détail d'un projet -->
+  <dialog class="modal" id="modal" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" id="modal-close" aria-label="Fermer">✕</button>
+    <div id="modal-content"></div>
+  </dialog>
+
+  <noscript><p class="noscript">Active JavaScript pour afficher tout le contenu du portfolio.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* Page d'erreur 404 personnalisée (complète style.css) */
+.page-404 { min-height: 100vh; display: grid; place-items: center; padding: 40px 16px; }
+#rain { position: fixed; inset: 0; z-index: -1; width: 100%; height: 100%; }
+.corner { position: fixed; top: 16px; right: 16px; }
+.e404 { width: min(640px, 100%); text-align: center; }
+.e404 h1 {
+  font: 700 clamp(6rem, 24vw, 11rem)/1 var(--mono); margin: 0; color: var(--accent);
+  text-shadow: 0 0 30px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.e404 .glitch::before, .e404 .glitch::after { opacity: .75; }
+.glitching-loop::before { animation: glitch-1 1.8s steps(2) infinite; }
+.glitching-loop::after { animation: glitch-2 2.3s steps(2) infinite; }
+.e404-sub { color: var(--danger); letter-spacing: .15em; margin: 10px 0 26px; }
+.e404 .terminal { text-align: left; }
+.e404 .terminal-body { min-height: 170px; }
+.e404 .hero-cta { justify-content: center; margin-top: 26px; }

@@ -1,0 +1,4 @@
+# Le back-office ne doit pas être indexé par les moteurs de recherche
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

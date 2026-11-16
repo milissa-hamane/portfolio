@@ -1,0 +1,10 @@
+Mets ici tes documents PDF (ils seront accessibles depuis le site) :
+
+- documentation-glpi.pdf      -> ta documentation d'installation GLPI
+- tableau-synthese-E5.pdf     -> ton tableau de synthèse de l'épreuve E5
+- dossier-E6.pdf              -> ton dossier professionnel de l'épreuve E6
+
+Si tu changes les noms des fichiers, modifie aussi les liens dans le back-office
+(Projets -> Lien documentation, Épreuves -> Documents).
+
+Attention : ne mets pas de document contenant des mots de passe ou des adresses IP réelles d'une entreprise.
