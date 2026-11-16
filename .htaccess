@@ -1,7 +1,7 @@
 # ===== Portfolio – configuration Apache =====
 
 # Page d'erreur 404 personnalisée
-ErrorDocument 404 /portfolio-milissa/404.html
+ErrorDocument 404 /404.html
 
 # Pas de liste des fichiers dans les dossiers
 Options -Indexes

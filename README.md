@@ -52,7 +52,7 @@ Ouvre ensuite http://localhost:8000
 4. Va sur `https://ton-site/admin/setup.php`, entre la clé et crée ton identifiant + mot de passe.
    Ensuite la page `setup.php` se bloque toute seule.
 5. Connecte-toi sur `https://ton-site/admin/` et modifie ton contenu.
-6. Remplace `https://www.votre-domaine.fr/` par ta vraie adresse dans `index.html`, `cv.html`, `robots.txt` et `sitemap.xml`.
+6. Remplace `https://milissa.hamane.mds-nantes.fr/` par ta vraie adresse dans `index.html`, `cv.html`, `robots.txt` et `sitemap.xml`.
 7. Active le HTTPS dans `.htaccess` (lignes à décommenter) dès que ton certificat SSL fonctionne.
 
 Si le site est dans un sous-dossier (ex. `/portfolio/`), modifie la ligne `ErrorDocument` du `.htaccess`
