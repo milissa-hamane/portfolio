@@ -211,12 +211,11 @@
     Object.keys(groups).forEach(function (cat) {
       var card = el('div', { class: 'panel skill-cat reveal' }, [el('h3', { text: '// ' + cat })]);
       groups[cat].forEach(function (s) {
-        var lvl = Math.max(0, Math.min(100, parseInt(s.niveau, 10) || 0));
-        var fill = el('i');
-        fill.style.setProperty('--lvl', lvl + '%');
+        // un mot à la place d'un pourcentage
+        var lvl = parseInt(s.niveau, 10) || 0;
+        var mot = lvl >= 70 ? "À l'aise" : lvl >= 55 ? 'En pratique' : 'En apprentissage';
         card.appendChild(el('div', { class: 'skill' }, [
-          el('div', { class: 'skill-head' }, [el('span', { text: s.nom }), el('span', { text: lvl + '%' })]),
-          el('div', { class: 'bar', role: 'progressbar', 'aria-valuenow': lvl, 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-label': s.nom }, [fill])
+          el('div', { class: 'skill-head' }, [el('span', { text: s.nom }), el('span', { class: 'skill-word', text: mot })])
         ]));
       });
       box.appendChild(card);
@@ -269,7 +268,7 @@
     c.textContent = '';
     c.appendChild(el('p', { class: 'mono accent', text: '0x' + pad(i + 1) + (p.epreuve ? ' · Épreuve ' + p.epreuve : '') + (p.statut ? ' · ' + p.statut : '') }));
     c.appendChild(el('h2', { id: 'modal-title', text: p.titre }));
-    c.appendChild(el('p', { text: p.description || p.resume }));
+    c.appendChild(el('p', { text: p.description && !/à compléter|ta réalisation/i.test(p.description) ? p.description : p.resume }));
     if (list(p.realisations).length) {
       c.appendChild(el('h4', { text: 'Réalisations' }));
       c.appendChild(el('ul', { class: 'list' }, p.realisations.map(function (r) { return el('li', { text: r }); })));
@@ -447,7 +446,7 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       status.className = 'form-status';
-      if (!form.checkValidity()) { status.textContent = '> Vérifie les champs du formulaire.'; status.classList.add('err'); return; }
+      if (!form.checkValidity()) { status.textContent = '> Vérifiez les champs du formulaire.'; status.classList.add('err'); return; }
       var btn = form.querySelector('button'); btn.disabled = true;
       status.textContent = '> Envoi en cours…';
       var payload = {
@@ -457,7 +456,7 @@
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
         .then(function (res) {
           if (!res.ok) throw new Error(res.j.error || 'Erreur');
-          status.textContent = '> Message envoyé. Merci, je te réponds vite !';
+          status.textContent = '> Message envoyé. Merci, je vous réponds rapidement.';
           status.classList.add('ok'); form.reset();
         })
         .catch(function (err) { status.textContent = '> ' + (err.message || 'Envoi impossible.'); status.classList.add('err'); })

@@ -7,7 +7,7 @@ Thème **Cyber / DarkOps**, mode sombre / clair, animations JavaScript, back-off
 ```
 portfolio-milissa/
 ├── index.html            Page principale (présentation, compétences, projets, E5/E6, parcours, certifications, contact)
-├── cv.html               CV en HTML (bouton « Imprimer / PDF »)
+├── cv.html               Redirige vers le CV en PDF (docs/cv-milissa-hamane.pdf)
 ├── 404.html              Page d'erreur 404 personnalisée
 ├── .htaccess             Page 404, en-têtes de sécurité, cache
 ├── robots.txt            Règles pour les moteurs de recherche
@@ -27,7 +27,7 @@ portfolio-milissa/
 │   └── logout.php        Déconnexion
 ├── includes/             Configuration et sécurité (accès web bloqué)
 ├── data/                 portfolio.json, messages, compte admin (accès web bloqué)
-└── docs/                 Tes PDF (documentation GLPI, tableau E5, dossier E6)
+└── docs/                 Tes PDF (CV, documentation GLPI, tableau E5, dossier E6)
 ```
 
 ## 2. Tester sur ton ordinateur
